@@ -1,4 +1,4 @@
-GameVersion = "3_53"
+GameVersion = "3_80"
 ModName = "NewDescriptionFlavour"
 Author = "jackty89" --IE GameMaster-BE on the discord
 Description = "This mod allows you to add new custom descriptions to any product"

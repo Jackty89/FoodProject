@@ -1,4 +1,4 @@
-GameVersion = "3_53"
+GameVersion = "3_80"
 ModName = "AddNewFoods"
 Author = "jackty89" --IE GameMaster-BE on the discord
 ModDescription = "This mod allows you to add new Food and corresponding recipes. And allows you to change existing products/substance as cookingitems"
