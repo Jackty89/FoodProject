@@ -47,20 +47,13 @@ When you've made this you can add this to  AddNewFood Array
 
 * Product Id's can be found really easy with ModdingStation (see nexus)
 * Product ID, customDescriptionID, Language, languagefile location, custom description
-*ChangeDescIDandDescriptionForProductsArray Structure
-* {
-	* 	{
-	* 		ProductId,
-	* 		CustomDescriptionID,
-	* 		LanguageArray
-	* 		{
-	* 			{Language[X], LOC, Customdescript},
-	* 			{Language[X], LOC, Customdescript},
-	* 			...
-	* 		}
-	* 	},...
-* }
-*End Strcture
+* ChangeDescIDandDescriptionForProductsArray Structure
+	* ProductId,
+	* CustomDescriptionID,
+	* {Language[X], LOC, Customdescript},...
+* End Strcture
+
+This is how it looks:
 
 	{
 		"FOOD_JAM_CRAB", 
