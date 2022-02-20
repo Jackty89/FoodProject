@@ -41,4 +41,35 @@ THIS is how it looks in the code:
 	},
  
   
-When you've made this you can add this to  AddNewFood Array  
+When you've made this you can add this to  AddNewFood Array
+
+<b>NewDescriptionFlavour.lua</b>
+
+* Product Id's can be found really easy with ModdingStation (see nexus)
+* Product ID, customDescriptionID, Language, languagefile location, custom description
+*ChangeDescIDandDescriptionForProductsArray Structure
+* {
+	* 	{
+	* 		ProductId,
+	* 		CustomDescriptionID,
+	* 		LanguageArray
+	* 		{
+	* 			{Language[X], LOC, Customdescript},
+	* 			{Language[X], LOC, Customdescript},
+	* 			...
+	* 		}
+	* 	},...
+* }
+*End Strcture
+
+	{
+		"FOOD_JAM_CRAB", 
+		"FOOD_JAM_CRAB_DESC", 
+		{
+			{Languages[1], LOC4, "Somehow we were able to jammify a crab..."},
+			{Languages[2], LOC4, "C'est une text en francais"}
+		}
+	},
+
+
+When you've made this you can add this to ChangeDescIDandDescriptionForProductsArray 
