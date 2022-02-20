@@ -35,7 +35,7 @@ THIS is how it looks in the code:
 		RecipeCookingMethod[2], --Cooking method
 		NewFoodConsumeReward[9], --Consume Reward
 		{
-			{Languages[1], LanguageFileLoc[4], "Tea", "Some Fancy text correspoding with the language"},
+			{Languages[1], LanguageFileLoc[4], "Tea", "Some text correspoding with the language"},
 			{Languages[2], LanguageFileLoc[4], "FlavourText"}
 		}		
 	},
