@@ -4,7 +4,7 @@ Author = "jackty89" --IE GameMaster-BE on the discord
 ModDescription = "This mod allows you to add new Food and corresponding recipes. And allows you to change existing products/substance as cookingitems"
 
 -- Choose one of these fe. english would be Languages[1], french Languages[2] ...
-Languages = 
+Languages =
 {
 	"English",
 	"French",
@@ -25,26 +25,26 @@ Languages =
 	"USEnglish"
 }
 
-RecipeCookingMethod = 
+RecipeCookingMethod =
 {
-	"UI_COOK_STEW", 
-	"UI_COOK_DRINK", 
-	"UI_COOK_EGGS", 
-	"UI_COOK_MIX", 
-	"UI_COOK_CAKE", 
-	"UI_COOK_ICE", 
-	"UI_COOK_BAIT", 
-	"UI_COOK_PIE", 
-	"UI_COOK_DOUGNUT", 
-	"UI_COOK_CAKE", 
-	"UI_COOK_SMOKED_MEAT", 
-	"UI_COOK_MEAT", 
+	"UI_COOK_STEW",
+	"UI_COOK_DRINK",
+	"UI_COOK_EGGS",
+	"UI_COOK_MIX",
+	"UI_COOK_CAKE",
+	"UI_COOK_ICE",
+	"UI_COOK_BAIT",
+	"UI_COOK_PIE",
+	"UI_COOK_DOUGNUT",
+	"UI_COOK_CAKE",
+	"UI_COOK_SMOKED_MEAT",
+	"UI_COOK_MEAT",
 	"UI_COOK_VEG"
 }
 
-NewFoodConsumeReward = 
+NewFoodConsumeReward =
 {
-	"DE_FOOD_STAMINA", 
+	"DE_FOOD_STAMINA",
 	"DE_FOOD_ENERGY1",
 	"DE_FOOD_ENERGY2",
 	"DE_FOOD_ENERGY3",
@@ -55,7 +55,7 @@ NewFoodConsumeReward =
 	"DE_FOOD_HEALTH"
 }
 
-LanguageFileLoc = 
+LanguageFileLoc =
 {
 	"LOC1",
 	"LOC2",
@@ -63,10 +63,10 @@ LanguageFileLoc =
 	"LOC4",
 	"LOC5",
 	"LOC6"
-	
+
 }
 
--- SubstanceOrProduct[1] = Substance, ...[2] = Product 
+-- SubstanceOrProduct[1] = Substance, ...[2] = Product
 SubstanceOrProduct = {"Substance", "Product"}
 
 -- AddNewFood structure
@@ -82,13 +82,13 @@ SubstanceOrProduct = {"Substance", "Product"}
 	-- Language {{languages[X], LanguageFileLoc[X], Name, custom description},...}"languagefile location" doesn't really matter as the code is adding a brand new ID unless you want to keep things organized
 -- end structure
 
-AddNewFood = 
+AddNewFood =
 {
 	{
-		"Drinks_Coffee", 
+		"Drinks_Coffee",
 		{
-			{"LAUNCHSUB", "5", SubstanceOrProduct[1]}, 
-			{"FOOD_P_RADFARM", "2", SubstanceOrProduct[2]}, 
+			{"LAUNCHSUB", "5", SubstanceOrProduct[1]},
+			{"FOOD_P_RADFARM", "2", SubstanceOrProduct[2]},
 			{"FOOD_V_COW", "1", SubstanceOrProduct[2]}
 		},
 		"5",
@@ -99,13 +99,13 @@ AddNewFood =
 		RecipeCookingMethod[2],
 		NewFoodConsumeReward[4],
 		{
-			{Languages[1], LanguageFileLoc[4], "Coffee", "This hot beverage gains its flavor and warmth from a complex blend of Sievert Beans, providing a radiant and rich mouth feel. Weirdly, the warmth seems to disappear almost instantly after consumption."} 
+			{Languages[1], LanguageFileLoc[4], "Coffee", "This hot beverage gains its flavor and warmth from a complex blend of Sievert Beans, providing a radiant and rich mouth feel. Weirdly, the warmth seems to disappear almost instantly after consumption."}
 		}
 	},
 	{
-		"Tea", 
+		"Tea",
 		{
-			{"LAUNCHSUB","5", SubstanceOrProduct[1]}, 
+			{"LAUNCHSUB","5", SubstanceOrProduct[1]},
 			{"NIPNIPBUDS", "2", SubstanceOrProduct[2]}
 
 		},
@@ -113,18 +113,18 @@ AddNewFood =
 		"1",
 		"15",
 		"100",
-		"TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.MILKGGG.DDS",	
+		"TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.MILKGGG.DDS",
 		RecipeCookingMethod[2],
 		NewFoodConsumeReward[9],
 		{
 			{Languages[1], LanguageFileLoc[4], "Tea", "A lively and mouth-drying effect on the tongue. Not bitter, but a clean and refreshing quality. This tea is renowned across the local region, and is made fresh from whatever the recipe is."},
 			{Languages[2], LanguageFileLoc[4], "Thee", "Oho hon hon, ce n'est pas une baguette"}
-		}		
+		}
 	},
 	{
-		"Cola", 
+		"Cola",
 		{
-			{"LAUNCHSUB","5", SubstanceOrProduct[1]}, 
+			{"LAUNCHSUB","5", SubstanceOrProduct[1]},
 			{"PLANT_LUSH", "2", SubstanceOrProduct[2]},
 			{"CASING", "1", SubstanceOrProduct[2]}
 
@@ -133,17 +133,17 @@ AddNewFood =
 		"1",
 		"12",
 		"10",
-		"TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.MILKHHH.DDS",	
+		"TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.MILKHHH.DDS",
 		RecipeCookingMethod[2],
 		NewFoodConsumeReward[4],
 		{
 			{Languages[1], LanguageFileLoc[4], "Cola", "Sparkly drink that's more sugar than anything else."}
-		}		
+		}
 	}
 }
 
 --If you wish to make certain substances or products available as cookingproducts
-MakeProductOrSubstanceACookingIngredient = 
+MakeProductOrSubstanceACookingIngredient =
 {
 	{SubstanceOrProduct[1],"LAUNCHSUB"},
 	{SubstanceOrProduct[2],"CASING"},
@@ -154,48 +154,48 @@ SetCookingIngredientTrue = "True"
 ---------------------------------------------------------------------------------
 ----------START OF CODE MAGIC, NO NEED TO DO ANYTHING ANYMORE--------------------
 ---------------------------------------------------------------------------------
-NMS_MOD_DEFINITION_CONTAINER = 
+NMS_MOD_DEFINITION_CONTAINER =
 {
 	["MOD_FILENAME"] 			= ModName..GameVersion..".pak",
-	["MOD_DESCRIPTION"]			= ModDescription,   
+	["MOD_DESCRIPTION"]			= ModDescription,
 	["MOD_AUTHOR"]				= Author,
 	["NMS_VERSION"]				= GameVersion,
-	["MODIFICATIONS"] 			= 
+	["MODIFICATIONS"] 			=
 	{
 		{
-			["MBIN_CHANGE_TABLE"] 	= 
+			["MBIN_CHANGE_TABLE"] 	=
 			{
-				{					
-					["MBIN_FILE_SOURCE"] 	= "METADATA\REALITY\TABLES\NMS_REALITY_GCPRODUCTTABLE.MBIN",
-					["EXML_CHANGE_TABLE"] 	= 
+				{
+					["MBIN_FILE_SOURCE"] 	= "METADATA\\REALITY\\TABLES\\NMS_REALITY_GCPRODUCTTABLE.MBIN",
+					["EXML_CHANGE_TABLE"] 	=
 					{
-																
+
 					}
 				},
 				{
-					["MBIN_FILE_SOURCE"] 	= "METADATA\REALITY\TABLES\NMS_REALITY_GCRECIPETABLE.MBIN",
-					["EXML_CHANGE_TABLE"] 	= 
+					["MBIN_FILE_SOURCE"] 	= "METADATA\\REALITY\\TABLES\\NMS_REALITY_GCRECIPETABLE.MBIN",
+					["EXML_CHANGE_TABLE"] 	=
 					{
-						
+
 					}
 				},
 				{
-					["MBIN_FILE_SOURCE"] 	= "METADATA\REALITY\TABLES\NMS_REALITY_GCSUBSTANCETABLE.MBIN",
-					["EXML_CHANGE_TABLE"] 	= 
+					["MBIN_FILE_SOURCE"] 	= "METADATA\\REALITY\\TABLES\\NMS_REALITY_GCSUBSTANCETABLE.MBIN",
+					["EXML_CHANGE_TABLE"] 	=
 					{
-														
+
 					}
 				},
 				{
-					["MBIN_FILE_SOURCE"] 	= "METADATA\REALITY\TABLES\CONSUMABLEITEMTABLE.MBIN",
-					["EXML_CHANGE_TABLE"] 	= 
+					["MBIN_FILE_SOURCE"] 	= "METADATA\\REALITY\\TABLES\\CONSUMABLEITEMTABLE.MBIN",
+					["EXML_CHANGE_TABLE"] 	=
 					{
 
 					}
 				}
 			}
         }
-		
+
     }
 }
 
@@ -278,13 +278,13 @@ function CreateNewFoodProduct(NewFoodID, NewFoodName, NewFoodNameLc, NewFoodDesc
 			<Property name="EggModifierIngredient" value="True" />
 		</Property>
 	]]
- 
-	return result 
+
+	return result
 end
 
 function CreateNewRecipe(RecipeID, RecipeCookingMethod, RecipeCookingTime, NewFoodID, RecipeCookingAmount, Ingredients)
-	
-	
+
+
 	return
 	[[
 		<Property value="GcRefinerRecipe.xml">
@@ -299,7 +299,7 @@ function CreateNewRecipe(RecipeID, RecipeCookingMethod, RecipeCookingTime, NewFo
 				</Property>
 				<Property name="Amount" value="]]..RecipeCookingAmount..[[" />
 			</Property>
-	
+
 			<Property name="Ingredients">]]..Ingredients..[[</Property>
 		</Property>
 	]]
@@ -308,7 +308,7 @@ end
 
 function CreateNewIngredient(IngedientID, IngredientType, IngredientAmount)
 
-	return 
+	return
 	[[
 		<Property value="GcRefinerRecipeElement.xml">
 			<Property name="Id" value="]]..IngedientID..[[" />
@@ -321,7 +321,7 @@ function CreateNewIngredient(IngedientID, IngredientType, IngredientAmount)
 end
 
 function CreateNewConsumable(NewFoodID, NewFoodConsumeRewardID)
-	return 
+	return
 	[[
 		<Property value="GcConsumableItem.xml">
 			<Property name="ID" value="]]..NewFoodID..[[" />
@@ -340,7 +340,7 @@ function CreateNewConsumable(NewFoodID, NewFoodConsumeRewardID)
 end
 
 function LanguageFile(LanguageFileID)
-	return 
+	return
 	[[
 		<Property value="TkLocalisationEntry.xml">
 			<Property name="Id" value="]]..LanguageFileID..[[" />
@@ -402,7 +402,7 @@ end
 --Add New Foods to the product table
 local AddNewFoodsToProductTable = NMS_MOD_DEFINITION_CONTAINER["MODIFICATIONS"][1]["MBIN_CHANGE_TABLE"][1]["EXML_CHANGE_TABLE"]
 for i = 1, #AddNewFood do
-		
+
 	local FoodID = string.upper(AddNewFood[i][1])
 	local FoodName = string.upper(AddNewFood[i][1]).."_NAME"
 	local FoodNameLC = string.upper(AddNewFood[i][1]).."_NAME_L"
@@ -411,7 +411,7 @@ for i = 1, #AddNewFood do
 	local FoodValue = AddNewFood[i][6]
 	local FoodIcon = AddNewFood[i][7]
 
-	local temp_table = 
+	local temp_table =
 	{
 		["PRECEDING_KEY_WORDS"] = {"Table"},
 		["ADD"] = ""..CreateNewFoodProduct(FoodID, FoodName, FoodNameLC, FoodDesc, FoodStackSize, FoodValue, FoodIcon)
@@ -441,8 +441,8 @@ for i = 1, #AddNewFood do
 		IngredientAmnt = IngredientsArray[j][2]
 		IngredientsString = IngredientsString..""..CreateNewIngredient(IngredientId, IngredientType, IngredientAmnt)
 	end
-	
-	local temp_table = 
+
+	local temp_table =
 	{
 		["PRECEDING_KEY_WORDS"] = {"Table"},
 		["ADD"] = ""..CreateNewRecipe(RecipeID, CookingMethod, CookingTime, FoodID, CookingAmount, IngredientsString)
@@ -456,12 +456,12 @@ for i = 1, #AddNewFood do
 	local FoodID = string.upper(AddNewFood[i][1])
 	local FoodConsumeReward = string.upper(AddNewFood[i][9])
 
-	local temp_table = 
+	local temp_table =
 	{
 		["PRECEDING_KEY_WORDS"] = {"Table"},
 		["ADD"] = ""..CreateNewConsumable(FoodID, FoodConsumeReward)
 	}
-	AddFoodsAsConsumable[#AddFoodsAsConsumable + 1] = temp_table  		
+	AddFoodsAsConsumable[#AddFoodsAsConsumable + 1] = temp_table
 end
 
 --Adds Name, Name_L and Description to specific language files (language file is chosen by language argument)
@@ -469,28 +469,28 @@ local AddNewLanguageTables = NMS_MOD_DEFINITION_CONTAINER["MODIFICATIONS"][1]["M
 for i = 1, #AddNewFood do
 	local FoodID = string.upper(AddNewFood[i][1])
 	local LanguageTable = AddNewFood[i][10]
-	
+
 	for j = 1, #LanguageTable do
 		local Language = LanguageTable[j][1]
 		local FileLoc = LanguageTable[j][2]
 		local NameLC = LanguageTable[j][3]
 		local Name = string.upper(NameLC)
 		local FoodDescription = LanguageTable[j][4]
-		
+
 		local NameID = FoodID.."_NAME"
 		local NameLCID = FoodID.."_NAME_L"
 		local DescID = FoodID.."_DESC"
-		
+
 		local FoodNameTable = LanguageFile(NameID)
 		local FoodNameLCTable = LanguageFile(NameLCID)
 		local FoodDescTable = LanguageFile(DescID)
 
 		local FoodLanguageTable = FoodNameTable..FoodNameLCTable ..FoodDescTable
 
-		local temp_table = 
+		local temp_table =
 		{
-			["MBIN_FILE_SOURCE"] 	= "LANGUAGE\NMS_"..FileLoc.."_"..string.upper(Language)..".MBIN",
-			["EXML_CHANGE_TABLE"] 	= 
+			["MBIN_FILE_SOURCE"] 	= "LANGUAGE\\NMS_"..FileLoc.."_"..string.upper(Language)..".MBIN",
+			["EXML_CHANGE_TABLE"] 	=
 			{
 				{
 					["PRECEDING_KEY_WORDS"] = {"Table"},
@@ -499,7 +499,7 @@ for i = 1, #AddNewFood do
 				{
 					["SPECIAL_KEY_WORDS"] = {"Id", NameID , Language, "VariableSizeString.xml"},
 					["PRECEDING_KEY_WORDS"] = {Language},
-					["VALUE_CHANGE_TABLE"] = 
+					["VALUE_CHANGE_TABLE"] =
 					{
 						{"Value", Name}
 					}
@@ -507,7 +507,7 @@ for i = 1, #AddNewFood do
 				{
 					["SPECIAL_KEY_WORDS"] = {"Id", NameLCID , Language, "VariableSizeString.xml"},
 					["PRECEDING_KEY_WORDS"] = {Language},
-					["VALUE_CHANGE_TABLE"] = 
+					["VALUE_CHANGE_TABLE"] =
 					{
 						{"Value", NameLC}
 					}
@@ -515,7 +515,7 @@ for i = 1, #AddNewFood do
 				{
 					["SPECIAL_KEY_WORDS"] = {"Id", DescID , Language, "VariableSizeString.xml"},
 					["PRECEDING_KEY_WORDS"] = {Language},
-					["VALUE_CHANGE_TABLE"] = 
+					["VALUE_CHANGE_TABLE"] =
 					{
 						{"Value", FoodDescription}
 					}
@@ -523,16 +523,16 @@ for i = 1, #AddNewFood do
 
 			}
 		}
-		AddNewLanguageTables[#AddNewLanguageTables + 1] = temp_table  
-	
-	end			
+		AddNewLanguageTables[#AddNewLanguageTables + 1] = temp_table
+
+	end
 end
 
 --Will cange the value of SetCookingIngredient as True for either Substance/Product
 local SetSubstancesOrProductsAsCookingProducts = NMS_MOD_DEFINITION_CONTAINER["MODIFICATIONS"][1]["MBIN_CHANGE_TABLE"]
 for i = 1, #MakeProductOrSubstanceACookingIngredient do
 	local ID = ""
-	local File = "METADATA\REALITY\TABLES\NMS_REALITY_GC"..string.upper(MakeProductOrSubstanceACookingIngredient[i][1]).."TABLE.MBIN"
+	local File = "METADATA\\REALITY\\TABLES\\NMS_REALITY_GC"..string.upper(MakeProductOrSubstanceACookingIngredient[i][1]).."TABLE.MBIN"
 
 	if MakeProductOrSubstanceACookingIngredient[i][1] == "Product" then
 		ID = "Id"
@@ -540,18 +540,18 @@ for i = 1, #MakeProductOrSubstanceACookingIngredient do
 		ID = "ID"
 	end
 
-	local temp_table = 
-	{		
+	local temp_table =
+	{
 		["MBIN_FILE_SOURCE"] 	= File,
-		["EXML_CHANGE_TABLE"] 	= 
+		["EXML_CHANGE_TABLE"] 	=
 		{
 			{
 				["SPECIAL_KEY_WORDS"] = {ID, MakeProductOrSubstanceACookingIngredient[i][2]},
-				["VALUE_CHANGE_TABLE"] 	= 
+				["VALUE_CHANGE_TABLE"] 	=
 				{
 					{"CookingIngredient", SetCookingIngredientTrue}
 				}
-			}            
+			}
 		}
 	}
 	SetSubstancesOrProductsAsCookingProducts[#SetSubstancesOrProductsAsCookingProducts + 1] = temp_table
