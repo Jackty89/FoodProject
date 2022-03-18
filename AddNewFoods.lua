@@ -63,7 +63,6 @@ LanguageFileLoc =
 	"LOC4",
 	"LOC5",
 	"LOC6"
-
 }
 
 -- SubstanceOrProduct[1] = Substance, ...[2] = Product
@@ -282,14 +281,13 @@ function CreateNewFoodProduct(NewFoodID, NewFoodName, NewFoodNameLc, NewFoodDesc
 	return result
 end
 
-function CreateNewRecipe(RecipeID, RecipeCookingMethod, RecipeCookingTime, NewFoodID, RecipeCookingAmount, Ingredients)
-
-
+function CreateNewRecipe(RecipeID,RecipeType, RecipeName, RecipeCookingTime, NewFoodID, RecipeCookingAmount, Ingredients)
 	return
 	[[
 		<Property value="GcRefinerRecipe.xml">
 			<Property name="Id" value="]]..RecipeID..[[" />
-			<Property name="Name" value="]]..RecipeCookingMethod..[[" />
+			<Property name="RecipeType" value="]]..RecipeType..[[" />
+			<Property name="RecipeName" value="]]..RecipeName..[[" />
 			<Property name="TimeToMake" value="]]..RecipeCookingTime..[[" />
 			<Property name="Cooking" value="True" />
 			<Property name="Result" value="GcRefinerRecipeElement.xml">
@@ -315,8 +313,8 @@ function CreateNewIngredient(IngedientID, IngredientType, IngredientAmount)
 			<Property name="Type" value="GcInventoryType.xml">
 				<Property name="InventoryType" value="]]..IngredientType..[[" />
 			</Property>
-			<Property name="Amount" value="]]..IngredientAmount..[[" />
-        </Property>
+		<Property name="Amount" value="]]..IngredientAmount..[[" />
+		</Property>
 	]]
 end
 
@@ -425,7 +423,7 @@ for i = 1, #AddNewFood do
 
 	local RecipeID = "RECIPE_"..string.upper(AddNewFood[i][1])
 	local FoodID = string.upper(AddNewFood[i][1])
-	local CookingMethod = AddNewFood[i][8]
+	local CookingMethod = AddNewFood[i][8] --this contains an UI value like UI_COOK_Cake="Assemble Baked Product", ...
 	local CookingTime = AddNewFood[i][3]
 	local CookingAmount = AddNewFood[i][4]
 	local IngredientsArray = AddNewFood[i][2]
@@ -445,7 +443,7 @@ for i = 1, #AddNewFood do
 	local temp_table =
 	{
 		["PRECEDING_KEY_WORDS"] = {"Table"},
-		["ADD"] = ""..CreateNewRecipe(RecipeID, CookingMethod, CookingTime, FoodID, CookingAmount, IngredientsString)
+		["ADD"] = ""..CreateNewRecipe(RecipeID, CookingMethod, CookingMethod, CookingTime, FoodID, CookingAmount, IngredientsString)
 	}
 	AddNewRecipes[#AddNewRecipes + 1] = temp_table
 end
@@ -520,7 +518,6 @@ for i = 1, #AddNewFood do
 						{"Value", FoodDescription}
 					}
 				}
-
 			}
 		}
 		AddNewLanguageTables[#AddNewLanguageTables + 1] = temp_table

@@ -95,7 +95,7 @@ NMS_MOD_DEFINITION_CONTAINER =
     }
 }
 
-function newDescriptionText(newDescId)
+function NewDescriptionText(newDescId)
 	local result =
 	[[
 	<Property value="TkLocalisationEntry.xml">
@@ -184,7 +184,7 @@ for i = 1, #ChangeDescIDandDescriptionForProductsArray do
 				{
 					{
 						["PRECEDING_KEY_WORDS"] = {"Table"},
-						["ADD"] = ""..newDescriptionText(NewDescriptionID),
+						["ADD"] = ""..NewDescriptionText(NewDescriptionID),
 					},
 					{
 						["SPECIAL_KEY_WORDS"] = {"Id", NewDescriptionID , Language, "VariableSizeString.xml"},
