@@ -6,23 +6,23 @@ ModDescription = "This mod allows you to add new Food and corresponding recipes.
 -- Choose one of these fe. english would be Languages[1], french Languages[2] ...
 Languages =
 {
-	"English",
-	"French",
-	"Italian",
-	"German",
-	"Spanish",
-	"Russian",
-	"Polish",
-	"Dutch",
-	"Portuguese",
-	"LatinAmericanSpanish",
-	"BrazilianPortuguese",
-	"SimplifiedChinese",
-	"TraditionalChinese",
-	"TencentChinese",
-	"Korean",
-	"Japanese",
-	"USEnglish"
+	["English"] = "English",
+	["French"] = "French",
+	["Italian"] = "Italian",
+	["German"] = "German",
+	["Spanish"] = "Spanish",
+	["Russian"] = "Russian",
+	["Polish"] = "Polish",
+	["Dutch"] = "Dutch",
+	["Portuguese"] = "Portuguese",
+	["LatinAmericanSpanish"] = "LatinAmericanSpanish",
+	["BrazilianPortuguese"] = "BrazilianPortuguese",
+	["SimplifiedChinese"] = "SimplifiedChinese",
+	["TraditionalChinese"] = "TraditionalChinese",
+	["TencentChinese"] = "TencentChinese",
+	["Korean"] = "Korean",
+	["Japanese"] = "Japanese",
+	["USEnglish"] = "USEnglish"
 }
 
 RecipeCookingMethod =
@@ -62,7 +62,8 @@ LanguageFileLoc =
 	"UPDATE3",
 	"LOC4",
 	"LOC5",
-	"LOC6"
+	"LOC6",
+	"LOC7"
 }
 
 -- SubstanceOrProduct[1] = Substance, ...[2] = Product
@@ -98,7 +99,7 @@ AddNewFood =
 		RecipeCookingMethod[2],
 		NewFoodConsumeReward[4],
 		{
-			{Languages[1], LanguageFileLoc[4], "Coffee", "This hot beverage gains its flavor and warmth from a complex blend of Sievert Beans, providing a radiant and rich mouth feel. Weirdly, the warmth seems to disappear almost instantly after consumption."}
+			{Languages["English"], LanguageFileLoc[4], "Coffee", "This hot beverage gains its flavor and warmth from a complex blend of Sievert Beans, providing a radiant and rich mouth feel. Weirdly, the warmth seems to disappear almost instantly after consumption."}
 		}
 	},
 	{
@@ -116,8 +117,8 @@ AddNewFood =
 		RecipeCookingMethod[2],
 		NewFoodConsumeReward[9],
 		{
-			{Languages[1], LanguageFileLoc[4], "Tea", "A lively and mouth-drying effect on the tongue. Not bitter, but a clean and refreshing quality. This tea is renowned across the local region, and is made fresh from whatever the recipe is."},
-			{Languages[2], LanguageFileLoc[4], "Thee", "Oho hon hon, ce n'est pas une baguette"}
+			{Languages["English"], LanguageFileLoc[4], "Tea", "A lively and mouth-drying effect on the tongue. Not bitter, but a clean and refreshing quality. This tea is renowned across the local region, and is made fresh from whatever the recipe is."},
+			{Languages["French"], LanguageFileLoc[4], "Thee", "Oho hon hon, ce n'est pas une baguette"}
 		}
 	},
 	{
@@ -136,7 +137,7 @@ AddNewFood =
 		RecipeCookingMethod[2],
 		NewFoodConsumeReward[4],
 		{
-			{Languages[1], LanguageFileLoc[4], "Cola", "Sparkly drink that's more sugar than anything else."}
+			{Languages["English"], LanguageFileLoc[4], "Cola", "Sparkly drink that's more sugar than anything else."}
 		}
 	}
 }
