@@ -176,9 +176,9 @@ for i = 1, #ChangeDescIDandDescriptionForProductsArray do
 			local Language = Languages[j][1]
 			local LanguageUC = string.upper(Language)
 
-			local Loc = Languages[i][2]
+			local Loc = Languages[j][2]
 
-			local NewDescription = Languages[i][3]
+			local NewDescription = Languages[j][3]
 
 			local temp_table =
 			{
