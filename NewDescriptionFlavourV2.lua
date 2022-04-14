@@ -1,4 +1,3 @@
-GameVersion = "3_8X"
 ModName = "NewDescriptionFlavour"
 Author = "jackty89" --IE GameMaster-BE on the discord
 Description = "This mod allows you to add new custom descriptions to any product"
@@ -68,10 +67,9 @@ ChangeDescIDandDescriptionForProductsArray =
 ---------------------------------------------------------------------------------
 NMS_MOD_DEFINITION_CONTAINER =
 {
-	["MOD_FILENAME"] 			= ModName..GameVersion..".pak",
+	["MOD_FILENAME"] 			= ModName..".pak",
 	["MOD_DESCRIPTION"]			= "",
 	["MOD_AUTHOR"]				= Author,
-	["NMS_VERSION"]				= GameVersion,
 	["ADD_FILES"] 				=
 	{
 	},

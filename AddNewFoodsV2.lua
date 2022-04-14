@@ -189,7 +189,6 @@ MakeProductOrSubstanceACookingIngredient =
 ---------------------------------------------------------------------------------
 ----------START OF CODE MAGIC, NO NEED TO DO ANYTHING ANYMORE--------------------
 ---------------------------------------------------------------------------------
-GameVersion = "3_80"
 ModName = "AddNewFoods"
 Author = "jackty89" --IE GameMaster-BE on the discord
 ModDescription = "This mod allows you to add new Food and corresponding recipes. And allows you to change existing products/substance as cookingitems"
@@ -199,10 +198,9 @@ SetCookingIngredientTrue = "True"
 
 NMS_MOD_DEFINITION_CONTAINER =
 {
-	["MOD_FILENAME"] 			= ModName..GameVersion..".pak",
+	["MOD_FILENAME"] 			= ModName..".pak",
 	["MOD_DESCRIPTION"]			= ModDescription,
 	["MOD_AUTHOR"]				= Author,
-	["NMS_VERSION"]				= GameVersion,
 	["ADD_FILES"] 				=
 	{
 	},
