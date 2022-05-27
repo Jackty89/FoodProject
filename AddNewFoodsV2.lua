@@ -249,8 +249,8 @@ NMS_MOD_DEFINITION_CONTAINER =
 					}
 				}
 			}
-        }
-    }
+		}
+	}
 }
 
 function CreateNewFoodProduct(NewFoodID, NewFoodName, NewFoodNameLc, NewFoodDesc, NewFoodStackSize, NewFoodValue, NewFoodIcon)
