@@ -1,39 +1,39 @@
 -- Choose one of these fe. english would be Languages[1], french Languages[2] ...
 Languages =
 {
-	["English"] = "English",
-	["French"] = "French",
-	["Italian"] = "Italian",
-	["German"] = "German",
-	["Spanish"] = "Spanish",
-	["Russian"] = "Russian",
-	["Polish"] = "Polish",
-	["Dutch"] = "Dutch",
-	["Portuguese"] = "Portuguese",
+	["English"]               = "English",
+	["French"]                = "French",
+	["Italian"]               = "Italian",
+	["German"]                = "German",
+	["Spanish"]               = "Spanish",
+	["Russian"]               = "Russian",
+	["Polish"]                = "Polish",
+	["Dutch"]                 = "Dutch",
+	["Portuguese"]            = "Portuguese",
 	["LatinAmeraicanSpanish"] = "LatinAmericanSpanish", --this is not a typo
-	["BrazilianPortuguese"] = "BrazilianPortuguese",
-	["SimplifiedChinese"] = "SimplifiedChinese",
-	["TraditionalChinese"] = "TraditionalChinese",
-	["TencentChinese"] = "TencentChinese",
-	["Korean"] = "Korean",
-	["Japanese"] = "Japanese",
-	["USEnglish"] = "USEnglish"
+	["BrazilianPortuguese"]   = "BrazilianPortuguese",
+	["SimplifiedChinese"]     = "SimplifiedChinese",
+	["TraditionalChinese"]    = "TraditionalChinese",
+	["TencentChinese"]        = "TencentChinese",
+	["Korean"]                = "Korean",
+	["Japanese"]              = "Japanese",
+	["USEnglish"]             = "USEnglish"
 }
 
 RecipeCookingMethod =
 {
-	["Stew"] = "UI_COOK_STEW",
-	["Drink"] = "UI_COOK_DRINK",
-	["Eggs"] = "UI_COOK_EGGS",
-	["Mix"] = "UI_COOK_MIX",
-	["Cake"] = "UI_COOK_CAKE",
-	["Ice"] = "UI_COOK_ICE",
-	["Bait"] = "UI_COOK_BAIT",
-	["Pie"] = "UI_COOK_PIE",
-	["Dougnut"] = "UI_COOK_DOUGNUT",
+	["Stew"]       = "UI_COOK_STEW",
+	["Drink"]      = "UI_COOK_DRINK",
+	["Eggs"]       = "UI_COOK_EGGS",
+	["Mix"]        = "UI_COOK_MIX",
+	["Cake"]       = "UI_COOK_CAKE",
+	["Ice"]        = "UI_COOK_ICE",
+	["Bait"]       = "UI_COOK_BAIT",
+	["Pie"]        = "UI_COOK_PIE",
+	["Dougnut"]    = "UI_COOK_DOUGNUT",
 	["SmokedMeat"] = "UI_COOK_SMOKED_MEAT",
-	["Meat"] = "UI_COOK_MEAT",
-	["Veg"] = "UI_COOK_VEG"
+	["Meat"]       = "UI_COOK_MEAT",
+	["Veg"]        = "UI_COOK_VEG"
 }
 
 NewFoodConsumeReward =
@@ -42,11 +42,11 @@ NewFoodConsumeReward =
 	["Energy1"] = "DE_FOOD_ENERGY1",
 	["Energy2"] = "DE_FOOD_ENERGY2",
 	["Energy3"] = "DE_FOOD_ENERGY3",
-	["Haz1"] = "DE_FOOD_HAZ1",
-	["Haz2"] = "DE_FOOD_HAZ2",
-	["Haz3"] = "DE_FOOD_HAZ3",
+	["Haz1"]    = "DE_FOOD_HAZ1",
+	["Haz2"]    = "DE_FOOD_HAZ2",
+	["Haz3"]    = "DE_FOOD_HAZ3",
 	["JetPack"] = "DE_FOOD_JETPACK",
-	["Health"] = "DE_FOOD_HEALTH"
+	["Health"]  = "DE_FOOD_HEALTH"
 }
 
 -- SubstanceOrProduct[1] = Substance, ...[2] = Product
@@ -85,96 +85,96 @@ SubstanceOrProduct = { ["Substance"] = "Substance", ["Product"] =  "Product"}
 AddNewFood =
 {
 	{
-		["FoodID"] = "Drinks_Coffee",
+		["FoodID"]            = "Drinks_Coffee",
 		["RecipeIngredients"] =
 		{
 			--multiple recipes possible (see tea)
 			{
-				{"LAUNCHSUB", "5", SubstanceOrProduct["Substance"]},
+				{"LAUNCHSUB",      "5", SubstanceOrProduct["Substance"]},
 				{"FOOD_P_RADFARM", "2", SubstanceOrProduct["Product"]},
-				{"FOOD_V_COW", "1", SubstanceOrProduct["Product"]}
+				{"FOOD_V_COW",     "1", SubstanceOrProduct["Product"]}
 			}
 		},
-		["RecipeCookingTime"] = "5",
+		["RecipeCookingTime"]   = "5",
 		["RecipeCookingAmount"] = "1",
-		["Stacksize"] = "10",
-		["Price"] = "150",
-		["NewFoodIcon"] = "TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.COFFEE.DDS",
-		["CookingMethod"] = RecipeCookingMethod["Drink"],
-		["ConsumeReward"] = NewFoodConsumeReward["Energy3"],
-		["Languages"] =
+		["Stacksize"]           = "10",
+		["Price"]               = "150",
+		["NewFoodIcon"]         = "TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.COFFEE.DDS",
+		["CookingMethod"]       = RecipeCookingMethod["Drink"],
+		["ConsumeReward"]       = NewFoodConsumeReward["Energy3"],
+		["Languages"]           =
 		{
 			{Languages["English"], "Coffee", "This hot beverage gains its flavor and warmth from a complex blend of Sievert Beans, providing a radiant and rich mouth feel. Weirdly, the warmth seems to disappear almost instantly after consumption."}
 		}
 	},
 	{
-		["FoodID"] = "Drinks_Tea",
+		["FoodID"]            = "Drinks_Tea",
 		["RecipeIngredients"] =
 		{
 			{
-				{"LAUNCHSUB","5", SubstanceOrProduct["Substance"]},
+				{"LAUNCHSUB",  "5", SubstanceOrProduct["Substance"]},
 				{"NIPNIPBUDS", "2", SubstanceOrProduct["Product"]}
 			},
 			{
-				{"LAUNCHSUB","5", SubstanceOrProduct["Substance"]},
+				{"LAUNCHSUB",   "5", SubstanceOrProduct["Substance"]},
 				{"PLANT_RADIO", "2", SubstanceOrProduct["Substance"]}
 			}
 		},
-		["RecipeCookingTime"] = "2",
+		["RecipeCookingTime"]   = "2",
 		["RecipeCookingAmount"] = "1",
-		["Stacksize"] = "15",
-		["Price"] = "150",
-		["NewFoodIcon"] = "TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.TEA.DDS",
-		["CookingMethod"] = RecipeCookingMethod["Drink"],
-		["ConsumeReward"] = NewFoodConsumeReward["Health"],
-		["Languages"] =
+		["Stacksize"]           = "15",
+		["Price"]               = "150",
+		["NewFoodIcon"]         = "TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.TEA.DDS",
+		["CookingMethod"]       = RecipeCookingMethod["Drink"],
+		["ConsumeReward"]       = NewFoodConsumeReward["Health"],
+		["Languages"]           =
 		{
 			{Languages["English"], "Tea", "A lively and mouth-drying effect on the tongue. Not bitter, but a clean and refreshing quality. This tea is renowned across the local region, and is made fresh from whatever the recipe is."},
 			{Languages["French"], "Thee", "Oho hon hon, ce n'est pas une baguette"}
 		}
 	},
 	{
-		["FoodID"] = "Cola",
+		["FoodID"]            = "Cola",
 		["RecipeIngredients"] =
 		{
 			{
-				{"LAUNCHSUB","5", SubstanceOrProduct["Substance"]},
+				{"LAUNCHSUB",  "5", SubstanceOrProduct["Substance"]},
 				{"PLANT_LUSH", "2", SubstanceOrProduct["Product"]},
-				{"CASING", "1", SubstanceOrProduct["Product"]}
+				{"CASING",     "1", SubstanceOrProduct["Product"]}
 			}
 		},
-		["RecipeCookingTime"] = "10",
+		["RecipeCookingTime"]   = "10",
 		["RecipeCookingAmount"] = "1",
-		["Stacksize"] = "15",
-		["Price"] = "10",
-		["NewFoodIcon"] = "TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.COLA.DDS",
-		["CookingMethod"] = RecipeCookingMethod["Drink"],
-		["ConsumeReward"] = NewFoodConsumeReward["Energy3"],
-		["Languages"] =
+		["Stacksize"]           = "15",
+		["Price"]               = "10",
+		["NewFoodIcon"]         = "TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.COLA.DDS",
+		["CookingMethod"]       = RecipeCookingMethod["Drink"],
+		["ConsumeReward"]       = NewFoodConsumeReward["Energy3"],
+		["Languages"]           =
 		{
 			{Languages["English"], "Cola", "Sparkly drink that's more sugar than anything else."}
 		}
 	},
 	{
-		["FoodID"] = "choco_cake",
+		["FoodID"]            = "choco_cake",
 		["RecipeIngredients"] =
 		{
 			{
-				{"PLANT_POOP","5", SubstanceOrProduct["Substance"]},
+				{"FOOD_R_CHOC",     "5", SubstanceOrProduct["Substance"]},
 				{"FOOD_R_CAKEMIX", "1", SubstanceOrProduct["Product"]},
-				{"FOOD_R_CREAM", "1", SubstanceOrProduct["Product"]}
+				{"FOOD_R_CREAM",   "1", SubstanceOrProduct["Product"]}
 			}
 		},
-		["RecipeCookingTime"] = "25",
+		["RecipeCookingTime"]   = "25",
 		["RecipeCookingAmount"] = "1",
-		["Stacksize"] = "5",
-		["Price"] = "250",
-		["NewFoodIcon"] = "TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.CUPCAKEEVIL.DDS",
-		["CookingMethod"] = RecipeCookingMethod["Cake"],
-		["ConsumeReward"] = NewFoodConsumeReward["JetPack"],
-		["Languages"] =
+		["Stacksize"]           = "5",
+		["Price"]               = "250",
+		["NewFoodIcon"]         = "TEXTURES/UI/FRONTEND/ICONS/COOKINGPRODUCTS/PRODUCT.CUPCAKEEVIL.DDS",
+		["CookingMethod"]       = RecipeCookingMethod["Cake"],
+		["ConsumeReward"]       = NewFoodConsumeReward["JetPack"],
+		["Languages"]           =
 		{
-			{Languages["English"], "'Chocolate' cake", "'Chocolate' cake you probably can figure out what the chocolate is."}
+			{Languages["English"], "Chocolate cake", "Its a cake full of chocolate."}
 		}
 	}
 }
@@ -182,26 +182,26 @@ AddNewFood =
 --If you wish to make certain substances or products available as cookingproducts
 MakeProductOrSubstanceACookingIngredient =
 {
-	{SubstanceOrProduct["Substance"],"LAUNCHSUB"},
-	{SubstanceOrProduct["Product"],"CASING"},
-	{SubstanceOrProduct["Product"],"NIPNIPBUDS"},
+	{SubstanceOrProduct["Substance"], "LAUNCHSUB"},
+	{SubstanceOrProduct["Product"],   "CASING"},
+	{SubstanceOrProduct["Product"],   "NIPNIPBUDS"},
 }
 ---------------------------------------------------------------------------------
 ----------START OF CODE MAGIC, NO NEED TO DO ANYTHING ANYMORE--------------------
 ---------------------------------------------------------------------------------
-ModName = "AddNewFoods"
-Author = "jackty89" --IE GameMaster-BE on the discord
-ModDescription = "This mod allows you to add new Food and corresponding recipes. And allows you to change existing products/substance as cookingitems"
+ModName                  = "AddNewFoods"
+Author                   = "jackty89" --IE GameMaster-BE on the discord
+ModDescription           = "This mod allows you to add new Food and corresponding recipes. And allows you to change existing products/substance as cookingitems"
 
-CustomLanguageTag = "CustomNewFood"
+CustomLanguageTag        = "CustomNewFood"
 SetCookingIngredientTrue = "True"
 
 NMS_MOD_DEFINITION_CONTAINER =
 {
-	["MOD_FILENAME"] 			= ModName..".pak",
-	["MOD_DESCRIPTION"]			= ModDescription,
-	["MOD_AUTHOR"]				= Author,
-	["ADD_FILES"] 				=
+	["MOD_FILENAME"]         = ModName..".pak",
+	["MOD_DESCRIPTION"]      = ModDescription,
+	["MOD_AUTHOR"]           = Author,
+	["ADD_FILES"]            =
 	{
 	},
 	["MODIFICATIONS"] 			=
@@ -416,7 +416,7 @@ end
 local AddNewRecipes = NMS_MOD_DEFINITION_CONTAINER["MODIFICATIONS"][1]["MBIN_CHANGE_TABLE"][2]["EXML_CHANGE_TABLE"]
 for i = 1, #AddNewFood do
 	local Recipes = {}
-	
+
 	local FoodID = string.upper(AddNewFood[i]["FoodID"])
 	local RecipeID = "RECIPE_"..FoodID
 	local CookingMethod = AddNewFood[i]["CookingMethod"] --this contains an UI value like UI_COOK_Cake="Assemble Baked Product", ...
