@@ -169,8 +169,6 @@ end
 --This loop changes the description ID in producttbale
 local ChangeDescriptionID = NMS_MOD_DEFINITION_CONTAINER["MODIFICATIONS"][1]["MBIN_CHANGE_TABLE"][1]["EXML_CHANGE_TABLE"]
 for i = 1, #ChangeDescIDandDescriptionForProductsArray do
-
-
 	local NewDescriptionID = ChangeDescIDandDescriptionForProductsArray[i][2]
 
 	if(not(NewDescriptionID == ""))
