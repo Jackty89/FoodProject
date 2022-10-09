@@ -380,14 +380,17 @@ function CreateNewConsumable(NewFoodID, NewFoodConsumeRewardID)
 			<Property name="ID" value="]]..NewFoodID..[[" />
 			<Property name="RewardID" value="]]..NewFoodConsumeRewardID..[[" />
 			<Property name="TutorialRewardID" value="" />
-			<Property name="ButtonLocID" value="UI_CONSUME" />
-			<Property name="ButtonSubLocID" value="UI_CONSUME_SUB" />
+			<Property name="ButtonLocID" value="UI_OPEN_SENT" />
+			<Property name="ButtonSubLocID" value="UI_OPEN_SENT_SUB" />
 			<Property name="CloseInventoryWhenUsed" value="True" />
 			<Property name="AudioEventOnOpen" value="GcAudioWwiseEvents.xml">
 				<Property name="AkEvent" value="INVALID_EVENT" />
 			</Property>
 			<Property name="RewardFailedLocID" value="INTRCT_NOROOM_L" />
 			<Property name="DestroyItemWhenConsumed" value="True" />
+			<Property name="AddCommunityTierClassIcon" value="False" />
+			<Property name="SuppressResourceMessage" value="False" />
+			<Property name="CustomOSD" value="" />
 		</Property>
 	]]
 end
